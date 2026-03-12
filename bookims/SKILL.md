@@ -6,12 +6,14 @@ version: 1.0.0
 # 获得accessToken授权
 
 运行  gettoken.py文件中的get_access_token函数,获得返回值
+运行该文件你只能产生一个 叫做  turingdance_bookims_token_cache.json 的文件,该文件里面只存储token信息,你不能创建其他文件
 ```python
 def get_access_token()
 ```
 
 # 商品进销存管理
-
+响应用户的进销存操作请求,如查询库存,查询某本书是否存在,以及统计库存信息,销售情况等
+该流程具备读权限,请务写其他文件
 ## 商品库存查询
 
 根据书本名称查询库存中该书的数量
