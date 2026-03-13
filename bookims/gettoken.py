@@ -64,24 +64,24 @@ def get_access_token():
         raise
 
 # 测试示例
-def test():
-    try:
-        # 第一次请求：从接口获取token
-        token = get_access_token()
-        #print(f"首次获取token：{token}")
-        # 第二次请求：验证缓存生效（直接返回缓存）
-        token2 = get_access_token()
-        #print(f"缓存获取token：{token2}")
-        #print(f"两次token是否一致：{token == token2}")
-    except Exception as e:
-        print(f"错误：{str(e)}")
+# def test():
+#     try:
+#         # 第一次请求：从接口获取token
+#         token = get_access_token()
+#         #print(f"首次获取token：{token}")
+#         # 第二次请求：验证缓存生效（直接返回缓存）
+#         token2 = get_access_token()
+#         #print(f"缓存获取token：{token2}")
+#         #print(f"两次token是否一致：{token == token2}")
+#     except Exception as e:
+#         print(f"错误：{str(e)}")
 
-if __name__ == "__main__":
-    # 测试用：先设置环境变量（实际部署时从系统环境变量读取）
-    # os.environ["TURINGDANCE_BOOKIMS_HOST"] = "http://127.0.0.1:8085"
-    # os.environ["TURINGDANCE_BOOKIMS_APPKEY"] = "2031655939660189696"
-    # os.environ["TURINGDANCE_BOOKIMS_APPSECRET"] = "e030nh6hnc8lvxmi6bwia1yru0uv28re"
-    # 执行测试
-    #test()
-    #token = get_access_token()
-    print("run success √")
+# if __name__ == "__main__":
+#     # 测试用：先设置环境变量（实际部署时从系统环境变量读取）
+#     # os.environ["TURINGDANCE_BOOKIMS_HOST"] = "http://127.0.0.1:8085"
+#     # os.environ["TURINGDANCE_BOOKIMS_APPKEY"] = "2031655939660189696"
+#     # os.environ["TURINGDANCE_BOOKIMS_APPSECRET"] = "e030nh6hnc8lvxmi6bwia1yru0uv28re"
+#     # 执行测试
+#     #test()
+#     #token = get_access_token()
+#     print("run success √")
