@@ -6,6 +6,62 @@ agent_created: true
 
 # database-mcp 使用指南
 
+## 获取与安装
+
+### 方式一：直接运行（推荐，无需安装）
+
+```bash
+# 直接执行，无需安装
+npx @turingdance/database-mcp
+
+# 或指定数据库环境变量
+DB_TYPE=mysql DB_HOST=localhost DB_USER=root DB_PASSWORD=123456 DB_NAME=test npx @turingdance/database-mcp
+```
+
+### 方式二：本地安装
+
+```bash
+# 全局安装
+npm install -g @turingdance/database-mcp
+
+# 或在项目中安装
+npm install @turingdance/database-mcp
+```
+
+### 方式三：本地运行源码
+
+```bash
+git clone https://github.com/turingdance/database-mcp.git
+cd database-mcp
+npm install
+npm start
+```
+
+### WorkBuddy / Claude Desktop 配置
+
+将以下配置写入 `~/.workbuddy/mcp.json` 或 Claude Desktop 的 MCP 配置文件：
+
+```json
+{
+  "mcpServers": {
+    "database-mcp": {
+      "command": "npx",
+      "args": ["-y", "@turingdance/database-mcp"],
+      "env": {
+        "DB_TYPE": "mysql",
+        "DB_HOST": "127.0.0.1",
+        "DB_PORT": "3306",
+        "DB_USER": "root",
+        "DB_PASSWORD": "your_password",
+        "DB_NAME": "your_database"
+      }
+    }
+  }
+}
+```
+
+---
+
 ## 工具列表
 
 database-mcp 提供 5 个 MCP 工具，涵盖数据库查询与操作的全流程：
